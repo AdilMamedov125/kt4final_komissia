@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Информация о карте</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Информация о карте</h1>
+    <form id="cardForm">
+        <div class="form-group">
+            <label for="bank">Выберите банк</label>
+            <select id="bank" required>
+                <option value="" disabled selected>Выберите банк</option>
+                <option value="ВТБ">ВТБ</option>
+                <option value="Альфа банк">Альфа банк</option>
+                <option value="Сбербанк">Сбербанк</option>
+                <option value="Т-банк">Т-банк</option>
+                <option value="Банк 'Открытие'">Банк "Открытие"</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="cardNumber">Номер карты</label>
+            <input type="text" id="cardNumber" placeholder="0000 0000 0000 0000" maxlength="19" required>
+        </div>
+        <div class="form-group">
+            <label for="cardName">Имя владельца</label>
+            <input type="text" id="cardName" placeholder="Имя Фамилия" required>
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label for="expiryDate">Срок действия</label>
+                <input type="text" id="expiryDate" placeholder="MM/YY" maxlength="5" required>
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="password" id="cvv" placeholder="123" maxlength="3" required>
+            </div>
+        </div>
+        <button type="submit">Отправить</button>
+    </form>
+    <script src="./app.js"></script>
+</body>
+</html>
